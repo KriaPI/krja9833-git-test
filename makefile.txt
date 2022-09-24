@@ -1,0 +1,13 @@
+
+# Macros
+CC := gcc
+CFLAGS := -Wall -g -march=native
+source := avx_test
+
+
+# Rules
+$(source): $(source).c
+	$(CC) -o $(source) $(source).c $(CFLAGS) 
+clean:
+	del $(source).exe
+	
